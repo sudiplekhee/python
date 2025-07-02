@@ -10,6 +10,12 @@ print(f"Hello{first_name}")
 print(f"My favorite food is {food}")
 print(f"My email is:{email}")
 
+
+
+name="lekhee"
+print("Hello " +name)
+print("Hello ",name)
+
 #Integers
 age=21
 quantity=3
