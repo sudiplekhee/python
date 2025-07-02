@@ -1,10 +1,10 @@
 #Exercise 1 Rectangle Area Calculation
 
-# length=float(input("Enter length:"))
-# breadth=float(input("Enter Breadth:"))
+length=float(input("Enter length:"))
+breadth=float(input("Enter Breadth:"))
 
-# Area=length*breadth
-# print(f"The area of rectangle is:{Area}cm")
+Area=length*breadth
+print(f"The area of rectangle is:{Area}cm")
 
 
 #Exercise 2 Shopping Cart Program
