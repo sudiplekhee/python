@@ -18,7 +18,7 @@ print(f"The circumference is :{round(circumference,3)}cm") #round halyo vane jas
 import math
 radius=float(input("Enter Area of circle:"))
 area=math.pi * pow(radius, 2)
-print(f"The area of circle is:{round(  area,2)}")
+# print(f"The area of circle is:{round(  area,2)}")
 
 import math
 
@@ -28,3 +28,37 @@ b=float(input("Enter side b:"))
 c=math.sqrt(pow(a,2)+pow(b,2))
 
 print(f"Side c={c}")
+
+# 2082/03 /19 written code by lekhi
+# if=Do some code only if some condition is True
+# Else do something else
+
+
+age=int(input("Enter your age:"))
+if age>=18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote")
+num=int(input("Enter even or odd number:"))
+if num%2==0:
+    print("Even number")
+else:
+    print("Odd number")
+
+response=(input("Would you like food? (Y/N):"))
+if response=="Y":
+    print("Have soome food")
+else:
+    print("No food for you!")
+    
+    
+name=input("Enter your namr:")
+if name=="":
+    print("You did not type in your name ")   
+else:
+    print(f"Hello{name}")
+for_sale= True
+if for_sale:
+    print("This item is for sale")
+else:
+    print("This item is not for sale")

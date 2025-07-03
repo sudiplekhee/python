@@ -1,1 +1,2 @@
-result=math.ceil(x)
+
+import math
