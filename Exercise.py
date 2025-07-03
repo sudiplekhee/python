@@ -17,3 +17,5 @@ Total= price * quantity
 print(f"You have bought {price} X {quantity}")
 
 print(f"Your total is :{Total}")
+
+
