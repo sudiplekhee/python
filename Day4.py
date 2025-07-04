@@ -1,55 +1,55 @@
-#Python calculator
+# Python calculator
 
-# operator=input("Enter an operator(+ - * /):")
-# num1=float(input("Enter the first number:"))
-# num2=float(input("Enter the second number:"))
+operator=input("Enter an operator(+ - * /):")
+num1=float(input("Enter the first number:"))
+num2=float(input("Enter the second number:"))
 
-# if operator=="+":
-#     result=num1+num2
-#     print(round(result,2))
-# elif operator=="-":
-#     result=num1-num2
-#     print(round(result,2))
-# elif operator=="*":
-#     result=num1*num2
-#     print(round(result,2))
-# elif operator=="/":
-#     result=num1/num2
-#     print(round(result,2))     
-# else:
-#     print("Wrong operator")    
+if operator=="+":
+    result=num1+num2
+    print(round(result,2))
+elif operator=="-":
+    result=num1-num2
+    print(round(result,2))
+elif operator=="*":
+    result=num1*num2
+    print(round(result,2))
+elif operator=="/":
+    result=num1/num2
+    print(round(result,2))     
+else:
+    print("Wrong operator")    
     
-#Python weight converter
+# Python weight converter
 
-# weight=float(input("Enter your weight:"))    
-# unit=input("Kilograms or Pounds ? (K or L):")
+weight=float(input("Enter your weight:"))    
+unit=input("Kilograms or Pounds ? (K or L):")
 
-# if unit=="K":
-#     weight=weight*2.205
-#     unit="Lbs."
-#     print(f"Your weight is :{round(weight,1)}{unit}")  
-# elif unit=="L":
-#     weight=weight/2.205  
-#     unit="kgs." 
-#     print(f"Your weight is :{round(weight,1)}{unit}")  
-# else:
-#  print(f"{unit}was not valid")
+if unit=="K":
+    weight=weight*2.205
+    unit="Lbs."
+    print(f"Your weight is :{round(weight,1)}{unit}")  
+elif unit=="L":
+    weight=weight/2.205  
+    unit="kgs." 
+    print(f"Your weight is :{round(weight,1)}{unit}")  
+else:
+ print(f"{unit}was not valid")
 
-#Practice
+# Practice
 
-# weight=float(input("Enter your weight:"))
-# unit=input("Kilograms or pounds ?(K or L):")
+weight=float(input("Enter your weight:"))
+unit=input("Kilograms or pounds ?(K or L):")
 
-# if unit=="K":
-#     weight=weight*2.205
-#     unit="kgs."
-#     print(f"The weight is {round(weight,2)} {unit}")
-# elif unit=="L":
-#     weight=weight * 2.205
-#     unit="lbs."
-#     print(f"The weight is {round(weight,2)} {unit}")
-# else:
-#     print("Not validated")
+if unit=="K":
+    weight=weight*2.205
+    unit="kgs."
+    print(f"The weight is {round(weight,2)} {unit}")
+elif unit=="L":
+    weight=weight * 2.205
+    unit="lbs."
+    print(f"The weight is {round(weight,2)} {unit}")
+else:
+    print("Not validated")
 
 unit=input("Is this temperature in Celsius or Fahrenheit(F/C):")    
 temp=float(input("Enter the temperature:"))
