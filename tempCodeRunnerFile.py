@@ -1,1 +1,1 @@
-Limited Access
+result=len(name)
