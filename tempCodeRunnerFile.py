@@ -1,1 +1,1 @@
-result=len(name)
+credit=credit_number[5:]
