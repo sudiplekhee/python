@@ -14,7 +14,7 @@ price=float(input("What is the price?:"))
 quantity=int(input("How many would you like:"))
 
 Total= price * quantity
-print(f"You have bought {price} X {quantity}")
+print(f"You have bought {price} * {quantity}")
 
 print(f"Your total is :{Total}")
 

@@ -1,1 +1,1 @@
-credit=credit_number[5:]
+i

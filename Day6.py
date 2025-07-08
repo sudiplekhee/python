@@ -1,27 +1,27 @@
-#indexing= accessing elements of a sequence using[] (indexing operator) [start:end:step] 
+# indexing= accessing elements of a sequence using[] (indexing operator) [start:end:step] 
 
-# credit_number="1234-5678-9045"
-# # credit=credit_number[0:4]
-# # credit=credit_number[5:]  # : yesto vyo vane last samma print garcha 
-# # credit=credit_number[-2]
-# credit=credit_number[::] # yesto halyo vane stsrt to end samma print huncha
-# credit=credit_number[::3]
-# print(credit)
-
-
-# credit_number="1234-5678-8976"
-# last_digits=credit_number[-4:]
-# last_digits=credit_number[::-1]
-# print(last_digits)
+credit_number="1234-5678-9045"
+# credit=credit_number[0:4]
+# credit=credit_number[5:]  # : yesto vyo vane last samma print garcha 
+# credit=credit_number[-2]
+credit=credit_number[::] # yesto halyo vane stsrt to end samma print huncha
+credit=credit_number[::3]
+print(credit)
 
 
+credit_number="1234-5678-8976"
+last_digits=credit_number[-4:]
+last_digits=credit_number[::-1]
+print(last_digits)
 
-##Format specifiers={value:flags} format a value based on what flags are inserted
 
 
-#.(number)f=round to that many decimal places(fixed point)
-#.(number)=allocate that many spaces
-#03.=allocate and zero pad that many spaces
+#Format specifiers={value:flags} format a value based on what flags are inserted
+
+
+# .(number)f=round to that many decimal places(fixed point)
+# .(number)=allocate that many spaces
+# 03.=allocate and zero pad that many spaces
 # :<=left justify
 # :>=right justify
 # :^=center align
@@ -49,7 +49,7 @@ print(f"Price7 is ${price7:,}") #Thousand ma comma halcha bicha ma
 print(f"Price7 is ${price7:+,.2f}") #Thousand ma comma halcha bicha ma
 
 
-##While loop=execute some code WHILE some condition remains true
+#While loop=execute some code WHILE some condition remains true
 
 name=input("Enter your name:")
 while name=="":
@@ -57,3 +57,33 @@ while name=="":
  name=input("Enter your name:")
 
 print(f"Hello {name}")
+
+num=int(input("Enter a # number 1-10:"))
+
+while num<1 or num>10:
+    print(f"{num}is not valid")
+    num=int((input("Enter a # between 1-10:")))
+    
+    print(f"Your number is {num}")
+
+principle=0
+rate=0
+time=0
+while principle <=0:
+   principle=float(input("Enter the principle amount:"))
+   if principle <=0:
+        print("The principle amount is not entered")
+        
+while rate<=0:
+    rate=float(input("Enter the interest rate:"))
+    if rate <=0:
+        print("The rate is not entered")
+        
+while time <=0:
+    time=float(input("Enter the time:"))
+    if time <=0:
+        print("The time is not entered")
+total=principle*pow((1+rate/100),time)
+print(total)
+
+#For loops=execute a block a fixed number of times. You can iterate over a range, String, Sequence etc.
