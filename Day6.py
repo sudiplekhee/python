@@ -88,23 +88,23 @@
 
 # For loops=execute a block a fixed number of times. You can iterate over a range, String, Sequence etc.
 
-# for alphabet in range(1,100):
-#     print(alphabet)
-# for alphabet in reversed (range(1,100)): #reversed means paxadi dheki print garcha
-#     print(alphabet)
-# for x in range(1,100,2): # last ma 2 cha ni 1 pachi 3 print garcha euta number chodera print garcha
-#     print(x)
+for alphabet in range(1,100):
+    print(alphabet)
+for alphabet in reversed (range(1,100)): #reversed means paxadi dheki print garcha
+    print(alphabet)
+for x in range(1,100,2): # last ma 2 cha ni 1 pachi 3 print garcha euta number chodera print garcha
+    print(x)
 
-# credit_card="1234-567-890-23"
-# for i in credit_card:    #credit card ko sabai number print garcha
-#     print(i)
+credit_card="1234-567-890-23"
+for i in credit_card:    #credit card ko sabai number print garcha
+    print(i)
     
-# for x in range(1,22):
-#     if x==13:
-#         # break #13 vanda mathy jadaina
-#         continue #13 lai hataucha ani aru print garcha   break ani continue euta keywords ho
-#     else:
-#      print(x)
+for x in range(1,22):
+    if x==13:
+        # break #13 vanda mathy jadaina
+        continue #13 lai hataucha ani aru print garcha   break ani continue euta keywords ho
+    else:
+     print(x)
 import time
 my_time=int(input("Enter times:"))
 for x in range(1,my_time):
@@ -118,3 +118,65 @@ for x in range(my_time,0,-1):
     time.sleep(1)  #3 sec pachi excute huncha
 print("Times up")
 
+import time
+
+my_time=int(input("Enter the times in second:"))
+
+for x in range(my_time,0,-1):
+    seconds=x%60
+    minutes=int(x/60)%60
+    hours=int(x/3600)
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    time.sleep(1)
+print("Times up!")
+
+
+#nested loop = A loop within another loop(outer,inner)
+#outer loop:
+#inner loop:
+for x in range(0,10):
+    print(x,end="")  #end ko kam k ho vanda kheri straight lines ma print garne 
+
+for x in range(4):
+    for y in range(1,10):
+        print(y,end="")
+        print()  #print() sabai new line ma aaucha
+        
+rows=int(input("Enter the rows: "))
+colums=int(input("Enter the colums: "))
+symbol=input("Enter symbol: ")
+
+for x in range(rows):
+    for y in range(colums):
+        print(symbol, end="")
+    print()
+
+
+#Collection =single "variable" used to store multiple values
+# list=[] ordered and changeable .DFuplicates Ok
+# Set={} unordered and immutable, But add/remove ok.No Duplicates
+# Tuple=() ordered and unchangable Duplicates Ok fASTER
+
+
+#List
+fruits= ["Apple","Ball","cow","hello"]
+print(fruits[0:2])
+print(dir(fruits))
+print(help(fruits))
+print(len(fruits))
+print("Apple" in fruits)  #True or false return garcha []yesko bhitra cha ki chaina ani true and false return garcha
+fruits[0]="Okasy" #Apple ko index 0 honita tele apple lai okasy banaucha change garcha
+fruits.append("Sudip") #Add garcha
+for x in fruits:
+fruits.remove("Apple") #sudip string hataucha
+fruits.insert(0,"Lekhee") # 0 index pachi insert garcha
+fruits.sort()#alphabetically order ma milaucha 
+fruits.reverse()#paxadi dheki agdii leucha
+fruits.clear() #sabai clear garcha 
+print(fruits.index("cow")) #index ley kati number index ma cha vancha
+print(fruits.count("cow")) #count ley kati ota cow cha vanera count garcha
+
+#Set
+fruits={"apple","banana","buffalo","dog"}    #set ma {} yesto bracket use huncha jati jati code execute garchum teti palta value yeta uta huncha matlan zigzag
+
+print(fruits)
