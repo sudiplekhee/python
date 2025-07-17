@@ -1,2 +1,1 @@
-
-groceries=[fruits,vegetables,meats]
+guess=input("Enter (A,B,C,D):").upper()
