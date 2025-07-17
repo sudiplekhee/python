@@ -1,1 +1,2 @@
-guess=input("Enter (A,B,C,D):").upper()
+
+    total += menu.get(food)
