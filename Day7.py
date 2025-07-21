@@ -104,97 +104,97 @@
 #ordered and changeable. No duplicates
 
 
-capitals={"USA":"Washington D.C.",
-          "Nepal":"Kathmandu",
-          "India":"New Delhi",
-          "China":"Beijing"}
-print(dir(capitals))
-print(help(capitals))
-print(capitals.get("USA"))
-print(capitals.get("Nepal"))
-print(capitals.get("India"))
-print(capitals.get("China"))
-print(capitals.get("Japan"))
+# capitals={"USA":"Washington D.C.",
+#           "Nepal":"Kathmandu",
+#           "India":"New Delhi",
+#           "China":"Beijing"}
+# print(dir(capitals))
+# print(help(capitals))
+# print(capitals.get("USA"))
+# print(capitals.get("Nepal"))
+# print(capitals.get("India"))
+# print(capitals.get("China"))
+# print(capitals.get("Japan"))
 
-if capitals.get("China"):
-    print("That capital city is matched")
-else:
-#     print("That capital doesnt exist")  
+# if capitals.get("China"):
+#     print("That capital city is matched")
+# else:
+# #     print("That capital doesnt exist")  
 
-capitals.update({"USA":"Berlin"})
-print(capitals)
-capitals.pop("Nepal") #pop vaneko remove garcha
-print(capitals)
-capitals.popitem() #dont need to add any value 
-capitals.clear() #clear all the dictionary
-print(capitals)
-keys=capitals.keys() #Sabailai list ma banai dincha like that dict_keys(['USA', 'Nepal', 'India', 'China'])
-for key in capitals.keys(): #USA
-# Nepal
-# India
-# China  yesari print garcha
- print(key)
+# capitals.update({"USA":"Berlin"})
+# print(capitals)
+# capitals.pop("Nepal") #pop vaneko remove garcha
+# print(capitals)
+# capitals.popitem() #dont need to add any value 
+# capitals.clear() #clear all the dictionary
+# print(capitals)
+# keys=capitals.keys() #Sabailai list ma banai dincha like that dict_keys(['USA', 'Nepal', 'India', 'China'])
+# for key in capitals.keys(): #USA
+# # Nepal
+# # India
+# # China  yesari print garcha
+#  print(key)
 
-values=capitals.values()  #dict_values(['Washington D.C.', 'Kathmandu', 'New Delhi', 'Beijing']) yo print garcha key :value   value print garcha 
-for value in capitals.values():  #Washington D.C.
-# Kathmandu
-# New Delhi
-# Beijing for loop use garim vane yesto print garcha
- print(value)
+# values=capitals.values()  #dict_values(['Washington D.C.', 'Kathmandu', 'New Delhi', 'Beijing']) yo print garcha key :value   value print garcha 
+# for value in capitals.values():  #Washington D.C.
+# # Kathmandu
+# # New Delhi
+# # Beijing for loop use garim vane yesto print garcha
+#  print(value)
 
-items=capitals.items() #dict_items([('USA', 'Washington D.C.'), ('Nepal', 'Kathmandu'), ('India', 'New Delhi'), ('China', 'Beijing')])
-print(items)
+# items=capitals.items() #dict_items([('USA', 'Washington D.C.'), ('Nepal', 'Kathmandu'), ('India', 'New Delhi'), ('China', 'Beijing')])
+# print(items)
 
-for key,value in capitals.items():
-    print(f"{key}:{value}") #USA:Washington D.C.
-Nepal:Kathmandu
-India:New Delhi
-China:Beijing print garcha yestop loop lagayera garim vane
+# for key,value in capitals.items():
+#     print(f"{key}:{value}") #USA:Washington D.C.
+# Nepal:Kathmandu
+# India:New Delhi
+# China:Beijing print garcha yestop loop lagayera garim vane
 
-Concession stand program
+# Concession stand program
 
-dictionary{key:value}
+# dictionary{key:value}
 
-menu={"pizza":3.00,
-      "nachos":4.50,
-      "popcorn":6.00,
-      "fries":2.50,
-      "chips":1.00,
-      "pretzel":3.50,
-      "soda":3.00,
-      "lemoade":4.25}
-cart=[]
-total=0
-print("--------MENU--------")
-for key,value in menu.items():
-    print(f"{key:10}:${value:.2f}")
-print("--------------------")
-while True:
-    food=input("Select an item (q to quit):")
-    if food.lower()=="q":
-        break
-    elif menu.get(food)is not None:
-        cart.append(food)
-for food in cart:
-    total += menu.get(food)
-print(food,end="")
-print()
-print(f"Total is :${total:.2f}")
+# menu={"pizza":3.00,
+#       "nachos":4.50,
+#       "popcorn":6.00,
+#       "fries":2.50,
+#       "chips":1.00,
+#       "pretzel":3.50,
+#       "soda":3.00,
+#       "lemoade":4.25}
+# cart=[]
+# total=0
+# print("--------MENU--------")
+# for key,value in menu.items():
+#     print(f"{key:10}:${value:.2f}")
+# print("--------------------")
+# while True:
+#     food=input("Select an item (q to quit):")
+#     if food.lower()=="q":
+#         break
+#     elif menu.get(food)is not None:
+#         cart.append(food)
+# for food in cart:
+#     total += menu.get(food)
+# print(food,end="")
+# print()
+# print(f"Total is :${total:.2f}")
 
-import random
-low=1
-high=100
-options=("rock","paper","scissors")
-cards=["2","3","4","5","6","7","8","9","J","K","L"]
-# number=random.randint(low,high)
-# number=random.random() #floating point return garcha random.random garyo vane
-# option=random.choice(options)
-random.shuffle(cards) #jun pani print hunu sakxxa random huncha chaye letter huncha ki chaye number
-print(cards)
-number=random.randint(1,6)  #Jun number pani print garcha 1 dheki 10 samma hai ta
-print(number)
+# import random
+# low=1
+# high=100
+# options=("rock","paper","scissors")
+# cards=["2","3","4","5","6","7","8","9","J","K","L"]
+# # number=random.randint(low,high)
+# # number=random.random() #floating point return garcha random.random garyo vane
+# # option=random.choice(options)
+# random.shuffle(cards) #jun pani print hunu sakxxa random huncha chaye letter huncha ki chaye number
+# print(cards)
+# number=random.randint(1,6)  #Jun number pani print garcha 1 dheki 10 samma hai ta
+# print(number)
 
-print(help(random))
+# print(help(random))
 
 
 #Python number guessing game
@@ -215,5 +215,16 @@ while is_running==True:
     if guess.isdigit():
         guess=int(guess)
         guesses += 1
+    if guess<lowest or guess>highest:
+        print("That number is out of range")
+        print(f"please select a number between{lowest} and {highest}")
+    elif guess>answer:
+        print("To low Try again")
+    elif guess>answer:
+        print("Too high ! try again")
     else:
-        print("Inavalid guess")
+        print(f"Correct! The answer was{answer}")
+        print(f"Number of guesses:{guesses}")
+else:
+     print("Inavalid guess")
+print(f"Please select a number between {lowest} and {highest}")

@@ -1,2 +1,2 @@
 
-    total += menu.get(food)
+print(f"Computer:{computer}")
