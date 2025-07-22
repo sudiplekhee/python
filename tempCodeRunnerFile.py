@@ -1,2 +1,2 @@
 
-print(f"Computer:{computer}")
+   return first + "" +last
