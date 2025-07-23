@@ -212,66 +212,109 @@
 #Iterable= An object/collection that can return its elements one at a time, allowing it to be iterated over in a loop 
 #Note it tuple and list can be reversed but set cannot be reversed
 
-numbers=[1,2,3,4,5,6,7,8]
-for number in numbers:
-   print(number)
-for number in reversed(numbers):
-   print(number,end=" ")
+# numbers=[1,2,3,4,5,6,7,8]
+# for number in numbers:
+#    print(number)
+# for number in reversed(numbers):
+#    print(number,end=" ")
    
-my_dictionary={"A":"Sudip","B":"Chaudhary"}
-for key,value in my_dictionary.items():
-   print(key,value)
+# my_dictionary={"A":"Sudip","B":"Chaudhary"}
+# for key,value in my_dictionary.items():
+#    print(key,value)
    
    
-#Membership operators=used to test whether a value or variable is found in a sequence(string,list,tupple or dictionary)
-#1.in 2.not in
+# #Membership operators=used to test whether a value or variable is found in a sequence(string,list,tupple or dictionary)
+# #1.in 2.not in
 
-word="sudip"
-letter=input("Guess a letter in the secret code:")
-if letter in word: #in means to find whether the value is in the word or not
-   print(f"The {letter} is found")
-else:
-   print(f"{letter} not found")
+# word="sudip"
+# letter=input("Guess a letter in the secret code:")
+# if letter in word: #in means to find whether the value is in the word or not
+#    print(f"The {letter} is found")
+# else:
+#    print(f"{letter} not found")
 
-word="sudip"
-letter=input("Guess a letter in the secret code:")
+# word="sudip"
+# letter=input("Guess a letter in the secret code:")
 
-if letter not in word: #in means to find whether the value is in the word or not
-  print(f"{letter} not found")
-else:
-  print(f"The {letter} is found")
+# if letter not in word: #in means to find whether the value is in the word or not
+#   print(f"{letter} not found")
+# else:
+#   print(f"The {letter} is found")
   
-student={"sudip","lekhee","anddic"}
-teacher={"bishal","prajwal","prabesh"}
-name=input("Enter name:")
-if name in student:
-   print(f"He is {name} student")
-elif name in teacher:
-     print(f"He is {name} teacher")
-else:
-   print("Nobody {name} was found")
+# student={"sudip","lekhee","anddic"}
+# teacher={"bishal","prajwal","prabesh"}
+# name=input("Enter name:")
+# if name in student:
+#    print(f"He is {name} student")
+# elif name in teacher:
+#      print(f"He is {name} teacher")
+# else:
+#    print("Nobody {name} was found")
    
-grades={"sudip":"A",
-        "Anddic":"B",
-        "Lekhee":"C",
-        "HAHA":"D",
-        "HEHE":"E"}
-student=input("Enter the name of a student:")
-if student in grades:
+# grades={"sudip":"A",
+#         "Anddic":"B",
+#         "Lekhee":"C",
+#         "HAHA":"D",
+#         "HEHE":"E"}
+# student=input("Enter the name of a student:")
+# if student in grades:
       
-   print(f"{student} grade is {grades[student]}") 
-   print(f"{student} grade is {grades}")  #grades halim bhane sabai student ko prindt huncha but grades[student] garim vane name lekheko matra print huncha 
-else:
-   print(f"{student} was not found") 
+#    print(f"{student} grade is {grades[student]}") 
+#    print(f"{student} grade is {grades}")  #grades halim bhane sabai student ko prindt huncha but grades[student] garim vane name lekheko matra print huncha 
+# else:
+#    print(f"{student} was not found") 
    
-email="sudipchaudhary123gmail.com"
+# email="sudipchaudhary123gmail.com"
 
-if "@" in email and "." in email:
-   print("validate email")
-else:
-   print("Not validate email")
+# if "@" in email and "." in email:
+#    print("validate email")
+# else:
+#    print("Not validate email")
     
-    
+
+#LIST COMPREHENSION= A concise way to create lists in python 
+#Compact and easier to read than traditional loops
+#[expression for value in iterable if condition ]
+
+double=[]
+for x in range(1,11):
+    double.append(x *2) #yesto print garcha [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+print(double)
+
+double=[x *2 for x in range(1,11)]
+triple=[x *3 for x in range(1,11)]
+square=[x * x for x in range(1,11)] 
+print(double)
+print(triple)
+print(square)
+
+fruits=["apple","banana","mango","orange"]
+for x in fruits:
+    print(x)
+fruits=[]
+user=input("Enter the food")
+for users in user:
+    fruits.append(users)
+print(fruits)
+fruits=["orange","apple","banana","haha"]
+fruits= [fruit.upper() for fruit in fruits]
+fruits= [fruit[0] for fruit in fruits]
+print(fruits)
+
+numbers=[1,2,3,-4,-5,-6,7]
+postive_num=[num for num in numbers if num>=0]
+negative_num=[num for num in numbers if num<=0]
+even_number=[num for num in numbers if num%2==0]
+odd_number=[num for num in numbers if num%1==0]
+print(postive_num)
+print(negative_num)
+print(even_number)
+print(odd_number)
+
+grades=[80,85,34,34,90,99]
+total=[grade for grade in grades if grade>=80]
+print("He has passed")
+
 
 
 
