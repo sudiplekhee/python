@@ -1,0 +1,1 @@
+from script1 import *      # * means importing everything from script2

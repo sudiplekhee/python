@@ -1,2 +1,1 @@
-
-        return "It is saturday"
+print(e)
