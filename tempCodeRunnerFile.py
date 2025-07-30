@@ -1,2 +1,2 @@
 
-balance=0
+        self.model=model
