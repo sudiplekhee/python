@@ -92,24 +92,51 @@
 
 #class=(blueprint)used to design the structure and layout of an object 
       
-class Car:
-    # def __init__(self): #we need this method(function) to create an object
-    def __init__(self,model,year,color,for_sale):
-        self.model=model
-        self.year=year
-        self.color=color
-        self.for_sale=for_sale
+# class Car:
+#     # def __init__(self): #we need this method(function) to create an object
+#     def __init__(self,model,year,color,for_sale):
+#         self.model=model
+#         self.year=year
+#         self.color=color
+#         self.for_sale=for_sale
     # car1 #This is object now
+from car import Car  #capital Car is class
 car1=Car("Mustang","2025","red",False)       
 car2=Car("lamborgini","white","2026",True)
+car3=Car("lamborgini","white","2026",True)
 
 
-every_car=[car1,car2]
+# every_car=[car1,car2]
 # print(car1.model)
 # print(car1.year)
 # print(car1.color)
 # print(car1.for_sale)
-for cars in every_car:
-    print(f"cars{every_car.model}")
+car1.drive()
+car2.stop()
+car3.describe()
 
-                   
+#class variables= shared among all instances of a class
+#Defined outside the constructor
+#Allow you to share data among all objects created from that class
+
+class Student:
+    class_year=2026
+    num_students=0
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        Student.num_students += 1
+student1=Student("sudip",21)
+student2=Student("Nikhil",20)
+student2=Student("Nikhil",20)
+print(student1.name)
+print(student1.age)
+print(Student.class_year) #Direct class name bata in print garna sakincha
+
+print(Student.num_students)
+print(f"My graduating class of {Student.class_year} has {Student.num_students} students") #Class ko through pani call garna milyo haii self nai chayincha vanera chaina
+
+
+#Inheritance= Allows a class to inherit attributes and methods from another class 
+#Helps with code reusability and extensibility
+#class child(Parent)
