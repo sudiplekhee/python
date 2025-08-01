@@ -181,26 +181,96 @@ dog.speak()
 # Multilevel inheritance=inherit from a parent which inherits from another parent C(B) <- A
 
 class Animal:
-    pass
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"He is {self.name} eating")
+
+    def dance(self):
+        print(f"He is {self.name} dancing")
+        
+
 class Prey(Animal):
     def flee(self):
-        print("This animal is fleeing")
+        print(f"This animal {self.name} is fleeing")
 
-class Perdator:
+
+class Predator(Animal):  # fixed spelling and inheritance
     def hunt(self):
-        print("This animal is hunting")
+        print(f"This animal {self.name} is hunting")
+
 
 class Rabbit(Prey):
     pass
 
-class Hawk(Perdator):
+
+class Hawk(Predator):
     pass
 
-class Fish(Prey,Perdator):
+
+class Fish(Prey, Predator):
     pass
 
-rabbit=Rabbit()
-hunk=Hawk()
-fish=Fish()
 
-fish.hunt()
+# Example usage:
+rabbit1 = Rabbit("Bunny")
+rabbit1.dance()   # ✅ Works now
+rabbit1.flee()
+
+hawk1 = Hawk("Eagle")
+hawk1.hunt()
+
+fish1 = Fish("Nemo")
+fish1.flee()
+fish1.hunt()
+
+#super()=function used in a child class to call methods from a parent class(superclass).
+#Allow you to extend the functionality of the inherited methods
+
+class Shape:
+      def __init__(self,color,isfilled):
+        self.color=color
+        self.isfilled=isfilled
+      def describe(self):
+          print(f"it is {self.color} and {'filled' if self.isfilled else 'not filled'}")
+class Circle(Shape):
+    def __init__(self,color,isfilled,radius):
+        super().__init__(color,isfilled)
+        self.radius=radius
+    def describe(self):
+        print(f"It is circle with an area of {3.14*self.radius*self.radius}") #this lines of code will work the upper parent class will not work if in circle the describe mathod is not done then parent class will worked
+        super().describe() #It is imported from the parent upper class
+class Square(Shape):
+     def __init__(self,color,isfilled,width):
+        super().__init__(color,isfilled)
+        self.width=width
+     def describe(self):
+        print(f"It is square with an area of {self.width*self.width}cm^2") #this lines of code will work the upper parent class will not work if in circle the describe mathod is not done then parent class will worked
+        super().describe()
+class Triangle(Shape):
+    def __init__(self,color,isfilled,width,height):
+        super().__init__(color,isfilled)
+        self.width=width
+        self.height=height
+    def describe(self):
+        print(f"It is traingle with an area of {self.width*self.height}cm^2") #this lines of code will work the upper parent class will not work if in circle the describe mathod is not done then parent class will worked
+        super().describe()
+    
+        
+circle=Circle(color="red",isfilled=True,radius=6)
+square=Square(color="blue",isfilled=True,width=6)
+triangle=Triangle(color="blue",isfilled=True,width=6,height=10)
+print(circle.color)
+print(circle.isfilled)
+print(circle.radius)
+print(square.color)
+print(square.isfilled)
+print(square.width)   
+print(triangle.color)
+print(triangle.isfilled)
+print(triangle.width)  
+print(triangle.height)  
+circle.describe()
+square.describe()
+triangle.describe()
