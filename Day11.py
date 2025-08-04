@@ -70,7 +70,60 @@ class Employee:
         self.position=position
     def get_info(self):
         return f"{self.name}={self.position}"
-    
+  
+
     @staticmethod
     def is_valid_position(position):
-        valid_
+        valid_positions=["Manager","cashier","Cook","janitor"]
+        return position in valid_positions
+print(Employee.is_valid_position("Cook"))
+employee1=Employee("Sudip","Manager")
+employee2=Employee("Nikhil","cashier")
+employee3=Employee("nishanta","worker") 
+print(employee1.get_info())
+print(employee2.get_info())
+print(employee3.get_info())
+
+#class methods= Allow operations related to the class itself
+#Take(s) as the first parameter ,which represents the class itself
+
+class Student:
+    count=0
+    total_gpa=0
+    def __init__(self,name,gpa):
+        self.name=name
+        self.gpa=gpa
+        Student.count += 1
+        Student.total_gpa += gpa
+        #Instance method
+    def get_info(self):
+        return "{self.name} {self.gpa}"
+    @classmethod
+    def get_count(cls):
+        return f"Total # of students :{cls.count}"
+    @classmethod
+    def average_gpa(cls):
+        if cls.count ==0:
+            return 0
+        else:
+            return f"{cls.total_gpa} {cls.count:.2f}"
+student1=Student("Sudip",3.66)
+student2=Student("Nikhil",3.78)   
+print(Student.get_count())
+print(Student.average_gpa())
+
+#Magic method=Dunder Methods (double underscore) __init__, __str__, __eq__
+#They are automatically called by many python's build in operations
+#They allow developer to define or customize the behaviour of object
+
+
+class Book:
+    def __init__(self,title,author,num_pages):
+        self.title=title
+        self.author=author
+        self.num_pages=num_pages
+    
+book1=Book("The habbit","J.R.R Tolkien",310)
+book2=Book("Harry Potter","sudip",223)
+book3=Book("The lion","lekhee cs",172)
+print(book1) #It gives memory address if we print directly object

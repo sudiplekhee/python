@@ -1,2 +1,2 @@
 
-        self.model=model
+    total_gpa=0
