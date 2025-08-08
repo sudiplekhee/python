@@ -159,15 +159,74 @@ print(book1["audio"])
 #gives your better setter and deleter method
 
 class Rectangle:
-    def __init__(self,width,height):
-        self._width=width
-        self._height=height
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
+
     @property
     def width(self):
-        pass
+        return f"{self._width:.2f}"
+
     @property
     def height(self):
-        pass
-rectangle=Rectangle(4,5)
-print(rectangle._height)
-print(rectangle._width)
+        return f"{self._height:.2f}"
+
+    @width.setter
+    def width(self, new_width):
+        if new_width > 0:
+            self._width = new_width   # ✅ fixed
+        else:
+            print("width must be greater than zero")
+
+    @height.setter
+    def height(self, new_height):
+        if new_height > 0:
+            self._height = new_height  # ✅ fixed
+        else:
+            print("height must be greater than zero")
+
+    @width.deleter
+    def width(self):
+        del self._width
+        print("width has been deleted")
+
+    @height.deleter
+    def height(self):
+        del self._height
+        print("height has been deleted")
+        
+
+
+
+rectangle = Rectangle(3, 4)
+print("Initial:", rectangle.width, rectangle.height)
+
+rectangle.width = 5       # ✅ works
+rectangle.height = -1     # ❌ prints warning, doesn't update
+
+del rectangle.width       # ✅ deletes width
+del rectangle.height      # ✅ deletes height
+
+
+#Decorator= A function that extends the behaviour of another function w/o modifying the base function 
+#pass the best function as an argument to the decorator
+
+# @add_sprinkles
+# get_ice_creams("vanila")
+
+def add_sprinkles(func):
+    def wrapper(*args,**kwargs):
+        print("*************************")
+        func(*args,**kwargs)
+    return wrapper
+def add_fudge(func):
+    def wrapper(*args,**kwargs):
+        print("You add fudge")
+        func(*args,**kwargs)
+    return wrapper
+@add_sprinkles
+@add_fudge
+def get_ice_cream(flavor):
+    print(f"Here is your {flavor} ice cream ")
+    
+get_ice_cream('vanila')
